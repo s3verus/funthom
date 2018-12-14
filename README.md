@@ -1,4 +1,4 @@
-#funthom (fun pentesting program with python)
+### funthom (fun pentesting program with python)
 
 > manage your network ;)
 
@@ -13,7 +13,7 @@
 ### YOU WILL NEED :
 
 - [x] python3
-- [x] npam
+- [x] nmap
 
 ### THIS CAN
 
