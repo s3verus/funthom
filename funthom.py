@@ -17,26 +17,31 @@ if x == 1 :
     newip=input("enter new ip: (192.168.1.2)\n")
     newmask=input("new netmask: (255.255.255.0)\n")
     intf=input("enter your interface: (eth0/wlan0)\n")
-    os.system("ifconfig %s 192.168.1.2 netmask 255.255.255.0" %intf)
+
+    os.system("ifconfig %s %s netmask %s" %(intf,newip,newmask) )
 else:
     if x == 2:
         newmac=input("enter new mac address: (00:00:00:00:00:02)\n")
         intf=input("enter your interface: (eth0/wlan0)\n")
+
         os.system("ifconfig %s down" %intf)
-        os.system("ifconfig %s hw ether 00:00:00:00:00:02" %intf)
+        os.system("ifconfig %s hw ether %s" %(intf,newmac))
         os.system("ifconfig %s up" %intf)
     else:
         if x == 3:
             ip=input("enter ip with type: (192.168.1.0/24) \n")
+
             os.system("nmap -sP %s" %ip)
         else:
             if x == 4:
                 ip=input("enter ip to scan: (192.168.1.1)\n")
                 iprng=input("enter range of ports: (for EX: 1-6000)\n")
-                os.system("nmap -p %s 192.168.1.1" %iprng)
+
+                os.system("nmap -p %s %s" %(iprng,ip))
             else:
                 if x == 5:
                     ip=input("enter ip to ping: (192.168.1.1)\n")
+
                     os.system("ping %s" %ip)
                 else:
                     if x == 99:
