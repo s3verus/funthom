@@ -1,7 +1,7 @@
 #funthom
 #Created by S3verus
 #Date: 10/Dec/2018
-#github.com/s3S3verus
+#github.com/S3verus
 #en.severus@gmail.com
 
 import os
